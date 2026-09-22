@@ -7,5 +7,8 @@ sun = 6
 GPIO.setup(sun, GPIO.IN)
 while True:
     if GPIO.input(sun):
-        state = 1 - state
-        GPIO.output(led, state)
+        GPIO.output(led, 0)
+    else:
+        GPIO.output(led, 1)
+
+        
