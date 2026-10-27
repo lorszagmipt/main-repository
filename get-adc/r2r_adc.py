@@ -62,7 +62,7 @@ class R2R_ADC:
         
 if __name__ == "__main__":
     try:
-        adc = R2R_ADC(3.3, verbose=True)
+        adc = R2R_ADC(3.22, verbose=True)
         while True:
                 adc.get_sar_voltage()
                 time.sleep(0.1)

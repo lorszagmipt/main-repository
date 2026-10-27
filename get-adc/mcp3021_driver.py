@@ -26,7 +26,7 @@ class MCP3021:
 
 if __name__ == "__main__":
     try:
-        mcp = MCP3021(5.0, verbose = True)
+        mcp = MCP3021(5.2, verbose = True)
         while True:
                 voltage = mcp.get_voltage()
                 print(f"Напряжение: {voltage:.2f} В")

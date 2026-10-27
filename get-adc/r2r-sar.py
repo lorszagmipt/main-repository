@@ -8,7 +8,7 @@ voltage_values = []
 time_values = []
 duration = 5.0
 
-try:
+try:q
     t_start = time.time()
     while (time.time() - t_start < duration):
         voltage_values.append(adc.get_sar_voltage())

@@ -20,3 +20,4 @@ try:
     adc_plot.plot_sampling_period_hist(time_values, filename="mcp-hist.png")
 finally:
     mcp.deinit()
+  
