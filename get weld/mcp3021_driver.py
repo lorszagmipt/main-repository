@@ -27,7 +27,11 @@ class MCP3021:
 
 if __name__ == "__main__":
     try:
+<<<<<<<< HEAD:get weld/mcp3021_driver.py
         mcp = MCP3021(5.2, True)
+========
+        mcp = MCP3021(5.2, verbose = True)
+>>>>>>>> 39a3b1a87ef31be03439ee4baa2af22436340e47:get-adc/mcp3021_driver.py
         while True:
             value = mcp.get_voltage()
             print(f"Напряжение: {value:.2f} В")
