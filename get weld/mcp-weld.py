@@ -4,8 +4,8 @@ import time
 import RPi.GPIO as GPIO
 import numpy as np
 
-duration = 120.0             # продолжительность измерений, с
-charge_time = duration / 2   # первые 60 с зарядка, следующие 60 с разрядка
+duration = 120.0
+charge_time = duration / 2
 time_values = []
 voltage_values = []
 GPIO.setmode(GPIO.BCM)
