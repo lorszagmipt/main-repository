@@ -1,6 +1,7 @@
 import smbus
 import time
 
+
 class MCP3021:
     def __init__(self, dynamic_range, verbose = False):
         self.bus = smbus.SMBus(1)
@@ -19,19 +20,17 @@ class MCP3021:
         if self.verbose:
             print(f"Принятые данные: {data}, Старший байт: {upper_data_byte:x}, Младший байт: {lower_data_byte:x}, Число: {number}")
         return number
-    
+
     def get_voltage(self):
-        number = self.get_number()
-        return number / 1023 * self.dynamic_range
+        return self.get_number() / 1024 * self.dynamic_range
+
 
 if __name__ == "__main__":
     try:
-        mcp = MCP3021(5.0, verbose = True)
+        mcp = MCP3021(5.2, True)
         while True:
-                voltage = mcp.get_voltage()
-                print(f"Напряжение: {voltage:.2f} В")
-                time.sleep(1)
-    except KeyboardInterrupt:
-        print("\nОстановлено пользователем")
+            value = mcp.get_voltage()
+            print(f"Напряжение: {value:.2f} В")
+            time.sleep(1)
     finally:
         mcp.deinit()
