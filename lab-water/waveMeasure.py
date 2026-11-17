@@ -3,9 +3,9 @@ import RPi.GPIO as GPIO
 from mcp3021_driver import MCP3021
 import csv
 
-duration = 5                        # секунд записи (калибровка: 10)
+duration = 15                        # секунд записи (калибровка: 10)
 waitDoor = True                      # False — для калибровки
-filename = "data-wave-60mm.csv"     # калибровка: "data/calibration/60 mm.txt"
+filename = "data-wave-120mm.csv"     # калибровка: "data/calibration/60 mm.txt"
 
 doorPin = 15
 closedLevel = 1                      # дверца закрыта — на входе 1
